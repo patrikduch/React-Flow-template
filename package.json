@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:build-client": "webpack --config=config/webpack.client.dev.config.js --watch",
-    "dev:serve": "node dist/server.js",
+    "dev:serve": "nodemon dist/server.js",
     "dev:build-server": "webpack --config=config/webpack.server.dev.config.js --watch",
     "dev": "npm-run-all --parallel dev:*",
     "build": "node src/server/main.js"
@@ -38,6 +38,7 @@
     "file-loader": "^6.1.1",
     "html-loader": "^1.3.2",
     "mini-css-extract-plugin": "^1.0.0",
+    "nodemon": "^2.0.6",
     "npm-run-all": "^4.1.5",
     "pnp-webpack-plugin": "^1.6.4",
     "sass-loader": "^10.0.3",
