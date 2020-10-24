@@ -22,6 +22,13 @@ extract-loader (Extract additional information into separate file.)
 
 file-loader (Creation of new file.)
 
+pnpapi (server build dependency)
+
 ## Webpack
 
 https://www.taniarascia.com/how-to-use-webpack/
+
+## Development
+
+Scripts
+dev:build-server (Compilation of NodeJS server)
