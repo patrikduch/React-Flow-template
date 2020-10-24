@@ -10,12 +10,13 @@ module.exports = {
     mode: 'development',
     output: {
         filename: '[name]-bundle.js',
-        path: path.resolve(__dirname, '../public'),
+        path: path.resolve(__dirname, '../dist'),
         publicPath: '/'
     },
 
     devServer: {
-        contentBase: 'public'
+        contentBase: 'dist',
+        overlay: true
     },
 
 	module: {
@@ -28,6 +29,27 @@ module.exports = {
                     loader: 'css-loader',
                 },
             ]
+           },
+
+           {
+               test: /\.html$/,
+               use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].html'
+                    }
+                },
+
+                {
+                    loader: 'extract-loader'
+                },
+
+                {
+                    loader: 'html-loader'
+                }
+                
+               ]
            }
 		],
     },
