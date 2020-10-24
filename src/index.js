@@ -1,4 +1,9 @@
 require('./styles/App.css');
 require('../public/index.html');
 
-console.log('Hello world from Patrik Duch');
+
+var arrowFunction = () => {
+    console.log('Hello world from Patrik Duch');
+}
+
+arrowFunction();
