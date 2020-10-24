@@ -37,3 +37,11 @@ dev:build-client (Compilation of client side.)
 dev:build-server (Compilation of NodeJS server.)
 
 dev:serve (Startup of development server.)
+
+### Server build
+
+node externals
+https://www.npmjs.com/package/webpack-node-externals
+
+html-webpack-plugin
+https://github.com/jantimon/html-webpack-plugin

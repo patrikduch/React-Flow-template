@@ -1,6 +1,6 @@
+import 'webpack-hot-middleware/client?reload=true';
 import './styles/App.css';
 import '../public/index.html';
-import 'webpack-hot-middleware/client';
 
 
 var arrowFunction = async (args) => {

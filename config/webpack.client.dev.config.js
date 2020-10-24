@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -54,20 +55,8 @@ module.exports = {
                test: /\.html$/,
                use: [
                 {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].html'
-                    }
-                },
-
-                {
-                    loader: 'extract-loader'
-                },
-
-                {
                     loader: 'html-loader',
-                }
-                
+                },      
                ]
            },
 
@@ -92,6 +81,10 @@ module.exports = {
     
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
+
+        }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             //both options are optional
