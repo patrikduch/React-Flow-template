@@ -27,8 +27,11 @@ url (Required dependency for client build.)
 ## Babel presets
 
 @babel/preset-flow (Flow type anotation support.)
+
 @babel/preset-react (Babel preset for transcompilation React syntax sugar.)
+
 babel-plugin-transform-class-properties
+
 babel-plugin-transform-object-rest-spread
 
 ## Webpack
