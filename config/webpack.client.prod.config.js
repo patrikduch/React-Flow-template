@@ -1,3 +1,4 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
@@ -15,18 +16,6 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         publicPath: '/'
     },
-
-    devServer: {
-        contentBase: 'dist',
-        overlay: true,
-        hot: true,
-        stats: {
-            colors: true
-        }
-    },
-
-
-    devtool: 'source-map',
 
 
 
@@ -81,12 +70,25 @@ module.exports = {
 
 		],
     },
+
+
+    optimization: {
+        minimize: true
+    },
+    
     
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',
 
+        }),
+
+        new webpack.DefinePlugin({
+            'process.env': {
+              'NODE_ENV': JSON.stringify('production')
+            }
+          
         }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output

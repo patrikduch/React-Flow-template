@@ -1,3 +1,4 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
@@ -83,6 +84,19 @@ module.exports = {
     },
     
     plugins: [
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns : [
+                '**/*',
+            ]
+        }),
+
+        new webpack.DefinePlugin({
+            'process.env': {
+              'NODE_ENV': JSON.stringify('development')
+            }
+          
+        }),
+
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',

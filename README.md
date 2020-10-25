@@ -12,6 +12,8 @@ babel-polyfill (polyfills for simulating functionality for IE browser)
 
 @babel/runtime (support of generators that are created via transcompilation process)
 
+clean-webpack-plugin (A webpack plugin to remove/clean your build folders.)
+
 npm-run-all (To run multiple scripts at once.)
 
 webpack, webpack-cli (Build process tools.)
