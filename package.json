@@ -10,6 +10,9 @@
     "dev:build-server": "webpack --config=config/webpack.server.dev.config.js --watch",
     "dev": "npm-run-all --parallel dev:*",
     "build": "node src/server/main.js",
+    "prod:build-client": "webpack --config=config/webpack.client.prod.config.js",
+    "prod:build-server": "webpack --config=config/webpack.server.dev.config.js",
+    "prod": "npm-run-all --parallel prod:*",
     "flow": "flow",
     "flow-stop": "flow stop"
   },
