@@ -10,7 +10,8 @@
     "dev:build-server": "webpack --config=config/webpack.server.dev.config.js --watch",
     "dev": "npm-run-all --parallel dev:*",
     "build": "node src/server/main.js",
-    "flow": "flow"
+    "flow": "flow",
+    "flow-stop": "flow stop"
   },
   "repository": {
     "type": "git",

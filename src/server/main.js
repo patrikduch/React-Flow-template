@@ -18,6 +18,5 @@ const staticMiddleware = epxress.static('dist');
 server.use(staticMiddleware);
 
 server.listen(8080, () => {
-    debugger;
     console.log("Server is listening.");
 })
