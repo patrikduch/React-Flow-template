@@ -9,10 +9,16 @@
                 },
                 "debug": true
             }
-        ]
+        ],
+
+        "@babel/preset-react",
+        "@babel/preset-flow"
+
     ],
 
     "plugins": [
-        "@babel/plugin-transform-runtime"
+        "@babel/plugin-transform-runtime",
+        "transform-class-properties",
+        "transform-object-rest-spread"
     ]
 }

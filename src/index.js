@@ -1,12 +1,13 @@
+// @flow
 import 'webpack-hot-middleware/client?reload=true';
 import './styles/App.css';
 import '../public/index.html';
 
+import App from './components/App';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var arrowFunction = async (args) => {
-    await console.log('Hello world from Patrik Duch', a,b);
-    const {a,b} = args;
-    console.log("Hello again");
-}
 
-console.log(arrowFunction({a: 1, b:2}));
+// Target HTML where component`s content will be injected.
+const appRoot = document.getElementById('app-root');
+ReactDOM.render(<App />, appRoot);
