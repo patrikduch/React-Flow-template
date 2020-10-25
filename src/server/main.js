@@ -1,3 +1,4 @@
+debugger;
 import epxress from 'express';
 import webpack from 'webpack';
 import webpackConfig from '../../config/webpack.client.dev.config';
@@ -14,8 +15,12 @@ server.use(hotMiddleware);
 
 const staticMiddleware = epxress.static('dist');
 
+
+debugger;
+
 server.use(staticMiddleware);
 
 server.listen(8080, () => {
+    debugger;
     console.log("Server is listening.");
 })

@@ -26,7 +26,9 @@ url (Required dependency for client build.)
 
 ## Webpack
 
-https://www.taniarascia.com/how-to-use-webpack/
+<p>Version 4 its still the most stable version for production. (October, 2020)</p>
+
+https://github.com/webpack/webpack/releases/tag/v4.44.2
 
 ## Development
 
@@ -37,6 +39,10 @@ dev:build-client (Compilation of client side.)
 dev:build-server (Compilation of NodeJS server.)
 
 dev:serve (Startup of development server.)
+
+### Debugging
+
+npm i nodemon@2.0.4 -g
 
 ### Server build
 
