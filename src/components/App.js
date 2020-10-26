@@ -17,6 +17,9 @@ class App extends React.Component<AppPropsType> {
         return (
             <div className='app'>
                 <h1>React Flow template by Patrik Duch</h1>
+                <p>First paragraph.</p>
+                <p>Second paragraph.</p>
+                <p>Another paragraph.</p>
             </div>
         );
     }

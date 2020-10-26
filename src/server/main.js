@@ -1,6 +1,6 @@
 import epxress from 'express';
 import webpack from 'webpack';
-import webpackDevConfig from '../../config/webpack.client.dev.config';
+import webpackDevConfig from '../../config/client/webpack.client.dev.config';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
@@ -11,15 +11,15 @@ const HOST = '0.0.0.0';
 const server =  epxress();
 
 
-if (process.env == 'development') {
-    const compiler = webpack(webpackConfig);
-    const devMiddleware = webpackDevMiddleware(compiler, webpackConfig.devServer);
+if (process.env && process.env.NODE_ENV === 'development') {
+
+    const compiler = webpack(webpackDevConfig);
+    const devMiddleware = webpackDevMiddleware(compiler, webpackDevConfig.devServer);
     const hotMiddleware = webpackHotMiddleware(compiler);
 
     server.use(devMiddleware);
     server.use(hotMiddleware);
 }
-
 
 const staticMiddleware = epxress.static('dist');
 

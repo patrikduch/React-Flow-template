@@ -10,24 +10,12 @@ module.exports = {
         main: ['core-js/fn/promise','./src/index.js'],        
     },
 
-    mode: 'development',
+    mode: 'production',
     output: {
         filename: '[name]-bundle.js',
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../../dist'),
         publicPath: '/'
     },
-
-    devServer: {
-        contentBase: 'dist',
-        overlay: true,
-        hot: true,
-        stats: {
-            colors: true
-        }
-    },
-
-
-    devtool: 'source-map',
 
 
 
@@ -82,25 +70,25 @@ module.exports = {
 
 		],
     },
+
+
+    optimization: {
+        minimize: true
+    },
+    
     
     plugins: [
-        new CleanWebpackPlugin({
-            cleanOnceBeforeBuildPatterns : [
-                '**/*',
-            ]
-        }),
-
-        new webpack.DefinePlugin({
-            'process.env': {
-              'NODE_ENV': JSON.stringify('development')
-            }
-          
-        }),
-
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',
 
+        }),
+
+        new webpack.DefinePlugin({
+            'process.env': {
+              'NODE_ENV': JSON.stringify('production')
+            }
+          
         }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
