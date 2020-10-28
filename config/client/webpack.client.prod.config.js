@@ -2,9 +2,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const pluginsConfig = require('./shared/webpack.client.plugins.config');
 const webpack = require('webpack');
+const { merge } = require('webpack-merge');
 
-module.exports = {
+const clientConfig = {
 
     entry: {
         main: ['core-js/fn/promise','./src/index.js'],        
@@ -15,60 +17,6 @@ module.exports = {
         filename: '[name]-bundle.js',
         path: path.resolve(__dirname, '../../dist'),
         publicPath: '/'
-    },
-
-
-
-	module: {
-		rules: [
-            {
-                test: /\.js$/,
-                use: [
-                    {
-                        loader: 'babel-loader',
-
-                    }
-                ],
-                exclude:  /node_modules/
-            },
-
-
-           {
-            test: /\.s?css$/,
-            use: [
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader',
-                },
-            ]
-           },
-
-           {
-               test: /\.html$/,
-               use: [
-                {
-                    loader: 'html-loader',
-                },      
-               ]
-           },
-
-
-           {
-               test: /\.(jpg|gif|png)$/,
-               use: [
-                {
-
-                    loader: 'file-loader',
-                    options: {
-                        name: 'images/[name].[ext]-[hash:8]'
-                    }
-                }
-
-               ]
-           }
-
-
-		],
     },
 
 
@@ -98,6 +46,8 @@ module.exports = {
         }),
     
     ],
-
-
 }
+
+
+
+module.exports = merge(pluginsConfig, clientConfig);
