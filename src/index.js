@@ -1,5 +1,4 @@
 // @flow
-import 'webpack-hot-middleware/client?reload=true';
 import './styles/Global.scss';
 import '../public/index.html';
 

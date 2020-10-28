@@ -2,6 +2,7 @@
 import './App.scss';
 import React from 'react';
 
+import { ClassicButton } from '../components/common/button/Button';
 
 /**
  * @type AppPropsType Props type anotaton for App component.
@@ -13,14 +14,21 @@ type AppPropsType = {};
  * @class App => root component that encapsulates all child components.
  */
 class App extends React.Component<AppPropsType> {
-    render(): React$Element<"div"> {
+    render(): React$Element<React$FragmentType> {
         return (
-            <div className='app'>
-                <h1>React Flow template by Patrik Duch</h1>
-                <p>First paragraph.</p>
-                <p>Second paragraph.</p>
-                <p>Another paragraph.</p>
-            </div>
+            <React.Fragment>
+                <header>
+                
+                </header>
+
+                <main>
+                
+                </main>
+
+                <footer>
+                
+                </footer>
+            </React.Fragment>
         );
     }
 }
