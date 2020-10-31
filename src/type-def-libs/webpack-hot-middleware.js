@@ -1,6 +1,6 @@
 // @flow
 
-declare module 'webpack-hot-middleware/client?reload=true' {
+declare module 'webpack-hot-middleware' {
     /* declarations go here... */
     declare module.exports: any;
 }

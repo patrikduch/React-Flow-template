@@ -1,8 +1,8 @@
 // @flow
 import './App.scss';
 import React from 'react';
-
 import { ClassicButton } from '../components/common/button/Button';
+import Header from '../components/skeleton/Header';
 
 /**
  * @type AppPropsType Props type anotaton for App component.
@@ -17,10 +17,7 @@ class App extends React.Component<AppPropsType> {
     render(): React$Element<React$FragmentType> {
         return (
             <React.Fragment>
-                <header>
-                
-                </header>
-
+               <Header title='React template' subtitle='Author: Patrik Duch' />
                 <main>
                 
                 </main>

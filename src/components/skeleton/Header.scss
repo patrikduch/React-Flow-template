@@ -1,0 +1,28 @@
+@import '../../../src/styles/base/settings';
+
+.header {
+  background: $off_black;
+  margin-bottom: $m-size;
+  padding: $m_size 0;
+  color: white;
+}
+
+.header__title {
+  // BEM - Block Element Modifier
+  font-size: $l-size;
+  margin: 0;
+}
+
+.header__subtitle {
+  color: $off_white;
+  font-size: $m_size;
+  font-weight: 500;
+  margin: 0;
+  margin-top: $xs_size;
+}
+
+@media (min-width: $desktop_breakpoint) {
+  .header {
+    margin-bottom: $xl_size;
+  }
+}
