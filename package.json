@@ -13,7 +13,8 @@
     "prod:build-server": "webpack --config=config/server/webpack.server.prod.config.js",
     "prod": "npm-run-all --parallel prod:*",
     "flow": "flow",
-    "flow-stop": "flow stop"
+    "flow-stop": "flow stop",
+    "test": "jest --env=jsdom --watchAll"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-flow": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-cli": "^6.26.0",
@@ -46,12 +48,16 @@
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.1.1",
     "flow-bin": "^0.136.0",
     "flow-watch": "^2.0.0",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^4.0.0-beta.14",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.1",
     "mini-css-extract-plugin": "^1.0.0",
     "npm-run-all": "^4.1.5",
     "pnp-webpack-plugin": "^1.6.4",

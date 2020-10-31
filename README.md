@@ -14,6 +14,12 @@ babel-polyfill (polyfills for simulating functionality for IE browser)
 
 clean-webpack-plugin (A webpack plugin to remove/clean your build folders.)
 
+enzyme (Component`s testing of ReactJS components.)
+
+enzyme-adapter-react-16 (Enzyme adapter for ReactJS component testing.)
+
+jest - (Unit testing library for JS codebase.)
+
 npm-run-all (To run multiple scripts at once.)
 
 webpack, webpack-cli (Build process tools.)
