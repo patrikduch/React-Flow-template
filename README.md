@@ -58,9 +58,6 @@ dev:build-server (Compilation of NodeJS server.)
 
 dev:serve (Startup of development server.)
 
-### Debugging
-
-npm i nodemon@2.0.4 -g
 
 ### Server build
 
